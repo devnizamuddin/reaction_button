@@ -1,3 +1,7 @@
+## 0.0.4
+
+Example introduced
+
 ## 0.0.3
 
 ReactionModel not found issue solved.
