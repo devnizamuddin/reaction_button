@@ -1,3 +1,7 @@
+## 0.0.7
+
+Overlay postition issue fixed
+
 ## 0.0.6
 
 Example image changed.
