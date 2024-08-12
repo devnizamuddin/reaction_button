@@ -2,9 +2,7 @@
 
 Customizable Reaction button to build social media application.
 
-## Getting started
-
-To work with this packge first of all you have to understand ReactionModel
+<img src="https://raw.githubusercontent.com/devnizamuddin/reaction_button/main/assets/example_card.png?token=GHSAT0AAAAAACVR2PW3ZY2NGP5OYFVXGJOYZVZTH4A">
 
 ## Usage
 

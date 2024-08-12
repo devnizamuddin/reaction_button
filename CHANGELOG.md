@@ -1,3 +1,11 @@
+## 0.0.6
+
+Example image changed.
+
+## 0.0.5
+
+Example Image added in readme.
+
 ## 0.0.4
 
 Example introduced
