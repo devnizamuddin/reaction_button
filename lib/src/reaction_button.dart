@@ -44,6 +44,12 @@ class _ReactionButtonState extends State<ReactionButton> {
   void _showReactions(BuildContext context) {
     final RenderBox renderBox = context.findRenderObject() as RenderBox;
     final Offset offset = renderBox.localToGlobal(Offset.zero);
+    final Size screenSize = MediaQuery.of(context).size;
+    final double overlayWidth = (widget.reactions.length * 50).toDouble();
+    double leftPosition = offset.dx;
+    if (offset.dx + overlayWidth > screenSize.width) {
+      leftPosition = screenSize.width - overlayWidth - 10;
+    }
 
     _overlayEntry = OverlayEntry(
       builder: (context) => Stack(
@@ -57,7 +63,7 @@ class _ReactionButtonState extends State<ReactionButton> {
             ),
           ),
           Positioned(
-            left: offset.dx,
+            left: leftPosition,
             top: offset.dy - 50,
             child: Material(
               color: Colors.transparent,
