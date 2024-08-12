@@ -2,7 +2,7 @@
 
 Customizable Reaction button to build social media application.
 
-<img src="https://raw.githubusercontent.com/devnizamuddin/reaction_button/main/assets/example_card.png?token=GHSAT0AAAAAACVR2PW3ZY2NGP5OYFVXGJOYZVZTH4A">
+<img src="https://raw.githubusercontent.com/devnizamuddin/reaction_button/main/assets/example_card.jpg?token=GHSAT0AAAAAACVR2PW3E6YJCOJY6BF3Y6D4ZVZ47SA">
 
 ## Usage
 
