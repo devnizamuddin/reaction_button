@@ -9,12 +9,14 @@ class ReactionButton extends StatefulWidget {
     this.selectedReaction,
     required this.reactions,
     required this.onChangedReaction,
+    this.alwaysShowSelection = false,
   });
 
   final ReactionModel placeHolder;
   final ReactionModel? selectedReaction;
   final List<ReactionModel> reactions;
   final Function(ReactionModel reaction) onChangedReaction;
+  final bool alwaysShowSelection;
 
   @override
   State<ReactionButton> createState() => _ReactionButtonState();
@@ -27,11 +29,10 @@ class _ReactionButtonState extends State<ReactionButton> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        widget.onChangedReaction(widget.selectedReaction ?? widget.placeHolder);
+        widget.alwaysShowSelection ? _showReactions(context) : _changeReaction();
       },
       onLongPressStart: (_) {
-        setState(() {});
-        _showReactions(context);
+        widget.alwaysShowSelection ? null : _showReactions(context);
       },
       child: Container(
         padding: const EdgeInsets.all(10),
@@ -41,7 +42,10 @@ class _ReactionButtonState extends State<ReactionButton> {
     );
   }
 
+  void _changeReaction() => widget.onChangedReaction(widget.selectedReaction ?? widget.placeHolder);
+
   void _showReactions(BuildContext context) {
+    setState(() {});
     final RenderBox renderBox = context.findRenderObject() as RenderBox;
     final Offset offset = renderBox.localToGlobal(Offset.zero);
     final Size screenSize = MediaQuery.of(context).size;
